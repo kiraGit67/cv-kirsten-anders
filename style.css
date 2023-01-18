@@ -1,0 +1,76 @@
+/* General Stylings */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+p,
+ul,
+ol {
+  font-size: 1.1em;
+}
+
+a {
+  text-decoration: none;
+  color: #006;
+}
+
+body {
+  margin: 0;
+}
+
+/* Specific Stylings */
+
+.header {
+  padding: 50px 35px;
+  text-align: center;
+  background-color: #eee;
+}
+
+.main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.header h1,
+.main h2 {
+  color: #006;
+}
+
+.main article h3 {
+  color: #003;
+}
+
+.header p {
+  font-size: 1.25em;
+}
+
+.header nav a {
+  font-size: 1.25em;
+  padding: 0.5em 1em;
+  margin: 0 0.15em;
+  color: white;
+  background-color: #009;
+  border-radius: 5px;
+}
+
+.header nav a:hover {
+  background-color: #f60;
+  color: #003;
+}
