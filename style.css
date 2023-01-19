@@ -42,10 +42,8 @@ body {
   background-color: #eee;
 }
 
-.main {
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 15px;
+.header p {
+  margin-bottom: 2em;
 }
 
 .header h1,
@@ -64,7 +62,6 @@ body {
 .header nav a {
   font-size: 1.25em;
   padding: 0.5em 1em;
-  margin: 0 0.15em;
   color: white;
   background-color: #009;
   border-radius: 5px;
@@ -73,4 +70,32 @@ body {
 .header nav a:hover {
   background-color: #f60;
   color: #003;
+}
+
+.header nav a:active {
+  background-color: #f60;
+  color: white;
+}
+
+.header nav > a + a {
+  margin-left: 0.5em;
+}
+
+.main {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.main > * + * {
+  margin-top: 3.5em;
+}
+
+.main > * {
+  padding-bottom: 2em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.main > *:last-child {
+  border-bottom: none;
 }
