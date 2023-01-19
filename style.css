@@ -34,6 +34,11 @@ body {
   margin: 0;
 }
 
+::selection {
+  background-color: #006;
+  color: #f90;
+}
+
 /* Specific Stylings */
 
 .header {
@@ -42,8 +47,13 @@ body {
   background-color: #eee;
 }
 
-.header p {
+.profession {
+  font-size: 1.25em;
   margin-bottom: 2em;
+}
+
+.profession::after {
+  content: " 🖍️";
 }
 
 .header h1,
@@ -53,10 +63,6 @@ body {
 
 .main article h3 {
   color: #003;
-}
-
-.header p {
-  font-size: 1.25em;
 }
 
 .header nav a {
