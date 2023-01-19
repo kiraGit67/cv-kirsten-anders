@@ -105,3 +105,15 @@ body {
 .main > *:last-child {
   border-bottom: none;
 }
+
+#contact > ol > li:first-child::before {
+  content: "📧 ";
+}
+
+#contact > ol > li:last-child::before {
+  content: "📱 ";
+}
+
+#contact > ol > li:nth-child(2)::before {
+  content: "📞 ";
+}
