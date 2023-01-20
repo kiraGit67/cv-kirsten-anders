@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-* {
+html {
   font-family: "Roboto", sans-serif;
 }
 
@@ -65,7 +65,7 @@ body {
   color: #003;
 }
 
-.header nav a {
+.nav-link {
   font-size: 1.25em;
   padding: 0.5em 1em;
   color: white;
@@ -73,17 +73,17 @@ body {
   border-radius: 5px;
 }
 
-.header nav a:hover {
+.nav-link:hover {
   background-color: #f60;
   color: #003;
 }
 
-.header nav a:active {
+.nav-link:active {
   background-color: #f60;
   color: white;
 }
 
-.header nav > a + a {
+.nav-link + .nav-link {
   margin-left: 0.5em;
 }
 
