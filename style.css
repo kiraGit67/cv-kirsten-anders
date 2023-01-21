@@ -117,3 +117,22 @@ body {
 #contact > ol > li:nth-child(2)::before {
   content: "📞 ";
 }
+
+.experiences-headline,
+.experiences-subline {
+  display: inline-block;
+}
+
+.experiences-subline {
+  background-color: #ededed;
+  color: #006;
+  margin-left: 10px;
+  padding: 2px 5px;
+  border-radius: 5px;
+}
+
+.experiences-headline::after {
+  content: "|";
+  color: #666;
+  margin-left: 15px;
+}
