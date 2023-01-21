@@ -44,9 +44,10 @@ body {
 /* Specific Stylings */
 
 .header {
-  padding: 50px 35px;
+  padding: 75px 35px 50px 35px;
   text-align: center;
   background-color: #eee;
+  position: relative;
 }
 
 .profession {
@@ -90,6 +91,21 @@ body {
   margin-left: 0.5em;
 }
 
+.hire-me {
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 0.5rem 1.5rem;
+  background-image: linear-gradient(#009, #006);
+  color: white;
+  border-radius: 10px;
+  border: 2px solid white;
+  outline: 1px solid #006;
+}
+
 .main {
   max-width: 850px;
   margin: 0 auto;
@@ -103,10 +119,16 @@ body {
 .main > * {
   padding-bottom: 2em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-inline: 1em;
 }
 
 .main > *:last-child {
   border-bottom: none;
+}
+
+.article-headline {
+  position: relative;
+  left: -1em;
 }
 
 #contact > ol > li:first-child::before {
