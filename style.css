@@ -8,6 +8,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
+  font-size: 1em;
 }
 
 h1,
@@ -22,7 +23,8 @@ h6 {
 p,
 ul,
 ol {
-  font-size: 1.1em;
+  font-size: 1.2em;
+  line-height: 1.5;
 }
 
 a {
@@ -81,6 +83,7 @@ body {
 .nav-link:active {
   background-color: #f60;
   color: white;
+  outline: 1px solid white;
 }
 
 .nav-link + .nav-link {
