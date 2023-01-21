@@ -8,7 +8,7 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 h1,
@@ -23,7 +23,7 @@ h6 {
 p,
 ul,
 ol {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.5;
 }
 
@@ -50,8 +50,16 @@ body {
   position: relative;
 }
 
+.headline-group {
+  font-size: 4rem;
+}
+
+.main-headline {
+  font-size: 1em;
+}
+
 .profession {
-  font-size: 1.25em;
+  font-size: 0.35em;
   margin-bottom: 2em;
 }
 
@@ -69,8 +77,8 @@ body {
 }
 
 .nav-link {
-  font-size: 1.25em;
-  padding: 0.5em 1em;
+  font-size: 1.25rem;
+  padding: 0.75rem 1.25rem;
   color: white;
   background-color: #009;
   border-radius: 5px;
@@ -107,19 +115,19 @@ body {
 }
 
 .main {
-  max-width: 850px;
+  max-width: 85ch;
   margin: 0 auto;
-  padding: 15px;
+  padding: 1rem;
 }
 
 .main > * + * {
-  margin-top: 3.5em;
+  margin-top: 3.5rem;
 }
 
 .main > * {
-  padding-bottom: 2em;
+  padding-bottom: 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
-  padding-inline: 1em;
+  padding-inline: 1rem;
 }
 
 .main > *:last-child {
@@ -157,13 +165,13 @@ body {
 .experiences-subline {
   background-color: #ededed;
   color: #006;
-  margin-left: 10px;
-  padding: 2px 5px;
-  border-radius: 5px;
+  margin-left: 0.25rem;
+  padding: 0.1rem 0.5rem;
+  border-radius: 0.25rem;
 }
 
 .experiences-headline::after {
   content: "|";
   color: #666;
-  margin-left: 15px;
+  margin-left: 0.5rem;
 }
