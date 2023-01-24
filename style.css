@@ -252,18 +252,15 @@ body {
 
 .experiences-headline {
   margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .experiences-subline {
   background-color: #ededed;
   color: #006;
+  _max-width: 45vw;
   padding: 0.1rem 0.5rem;
   border-radius: 0.25rem;
-}
-
-.experiences-headline::after {
-  content: " ";
-  color: #666;
 }
 
 @media screen and (min-width: 786px) {
