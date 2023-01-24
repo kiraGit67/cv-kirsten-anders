@@ -206,14 +206,16 @@ body {
 
   #skills .flex-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 7.5rem;
   }
 }
 
 @media print and (min-width: 786px) {
   #skills .flex-section {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 7.5rem;
   }
 }
 
