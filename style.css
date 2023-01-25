@@ -1,5 +1,22 @@
 /* General Stylings */
 
+:root {
+  --background-color: #fff;
+  --text-color: #000;
+  --light-blue: #00c;
+  --normal-blue: #009;
+  --middle-blue: #006;
+  --dark-blue: #003;
+  --orange: #f60;
+  --light-orange: #f90;
+  --middle-grey: #ddd;
+  --light-grey: #eee;
+  --border-color: rgba(0, 0, 102, 0.15);
+
+  --text-font: "Roboto", sans-serif;
+  --heading-font: "Montserrat", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -7,7 +24,7 @@
 }
 
 html {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--text-font);
   font-size: 16px;
 }
 
@@ -29,7 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--heading-font);
 }
 
 p,
@@ -41,16 +58,21 @@ ol {
 
 a {
   text-decoration: none;
-  color: #006;
+  color: var(--middle-blue);
+}
+
+a:hover {
+  color: var(--light-blue);
 }
 
 body {
   margin: 0;
+  background-color: var(--background-color);
 }
 
 ::selection {
-  background-color: #006;
-  color: #f90;
+  background-color: var(--middle-blue);
+  color: var(--light-orange);
 }
 
 /* Specific Stylings */
@@ -58,14 +80,16 @@ body {
 .header {
   padding: 5rem 2.25rem 3.5rem 2.25rem;
   text-align: center;
-  _background-color: #eee;
-  background-image: linear-gradient(lightgrey, transparent);
+  background-image: linear-gradient(var(--middle-grey), transparent);
   position: relative;
 }
 
 .headline-group {
   font-size: 4rem;
-  background-image: linear-gradient(#006 10%, #00c 50%);
+  background-image: linear-gradient(
+    var(--middle-blue) 10%,
+    var(--light-blue) 50%
+  );
   background-clip: text;
   -webkit-background-clip: text;
 }
@@ -85,11 +109,11 @@ body {
 }
 
 .main h2 {
-  color: #006;
+  color: var(--middle-blue);
 }
 
 .main article h3 {
-  color: #003;
+  color: var(--dark-blue);
 }
 
 .navigation {
@@ -105,20 +129,20 @@ body {
 .nav-link {
   font-size: 1.25rem;
   padding: 0.75rem 1.25rem;
-  color: white;
-  background-color: #009;
+  color: var(--background-color);
+  background-color: var(--normal-blue);
   border-radius: 5px;
 }
 
 .nav-link:hover {
-  background-color: #f60;
-  color: #003;
+  background-color: var(--orange);
+  color: var(--dark-blue);
 }
 
 .nav-link:active {
-  background-color: #f60;
-  color: white;
-  outline: 1px solid white;
+  background-color: var(--orange);
+  color: var(--background-color);
+  outline: 2px solid var(--background-color);
 }
 
 @media screen and (min-width: 786px) {
@@ -140,15 +164,15 @@ body {
   position: absolute;
   top: 35px;
   right: 35px;
-  font-family: "Montserrat", sans-serif;
+  font-family: var(--heading-font);
   font-size: 1.25rem;
   margin: 0;
   padding: 0.5rem 1.5rem;
-  background-image: linear-gradient(#009, #006);
-  color: white;
+  background-image: linear-gradient(var(--normal-blue), var(--middle-blue));
+  color: var(--background-color);
   border-radius: 10px;
-  border: 2px solid white;
-  outline: 1px solid #006;
+  border: 2px solid var(--background-color);
+  outline: 1px solid var(--middle-blue);
 }
 
 @media screen and (min-width: 992px) {
@@ -176,7 +200,7 @@ body {
 
 .main > * {
   padding-bottom: 2rem;
-  border-bottom: 2px solid rgba(0, 0, 102, 0.25);
+  border-bottom: 2px solid var(--border-color);
   padding-inline: 1rem;
 }
 
@@ -192,7 +216,7 @@ body {
 .article-headline::first-letter {
   font-size: 2.25rem;
   font-weight: 600;
-  color: #00c;
+  color: var(--light-blue);
 }
 
 @media screen and (min-width: 786px) {
@@ -260,8 +284,8 @@ body {
 }
 
 .experiences-subline {
-  background-color: #ededed;
-  color: #006;
+  background-color: var(--light-grey);
+  color: var(--middle-blue);
   _max-width: 45vw;
   padding: 0.1rem 0.5rem;
   border-radius: 0.25rem;
@@ -281,7 +305,7 @@ body {
 .footer {
   text-align: center;
   padding: 5rem 2.25rem;
-  background-image: linear-gradient(transparent, lightgrey);
+  background-image: linear-gradient(transparent, var(--middle-grey));
 }
 
 .footer-headline {
@@ -293,7 +317,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding-top: 1.25rem;
-  border-top: 2px solid rgba(0, 0, 102, 0.05);
+  border-top: 2px solid var(--border-color);
 }
 
 address {
