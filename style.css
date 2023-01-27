@@ -194,6 +194,15 @@ body {
   border-radius: 10px;
   border: 2px solid var(--background-color);
   outline: 1px solid var(--middle-blue);
+  opacity: 0.75;
+  transform-origin: 100% 0%;
+  transition: opacity 0.75s ease-in-out, transform 0.75s steps(5);
+}
+
+.header:hover .hire-me,
+.header:focus-within .hire-me {
+  opacity: 1;
+  transform: scale(1.25);
 }
 
 @media screen and (min-width: 992px) {
