@@ -29,7 +29,7 @@ html {
   color: var(--text-color);
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 18px;
   }
@@ -166,7 +166,7 @@ body {
   outline: 2px solid var(--light-blue);
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .navigation {
     flex-direction: row;
   }
@@ -238,6 +238,11 @@ body {
   border-bottom: none;
 }
 
+.main-article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
 .article-headline {
   position: relative;
   left: -1em;
@@ -249,9 +254,9 @@ body {
   color: var(--light-blue);
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .main {
-    max-width: 95ch;
+    max-width: 100ch;
   }
 
   .main > * + * {
@@ -262,18 +267,48 @@ body {
     padding-bottom: 3.5rem;
   }
 
-  #skills .flex-section {
-    display: flex;
-    justify-content: flex-start;
-    gap: 7.5rem;
+  .main-article-grid {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .article-content-grid {
+    margin-top: 2.5rem;
+  }
+
+  p.article-content-grid,
+  ol.article-content-grid {
+    margin-top: 3.5rem;
+  }
+
+  #skills .article-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
-@media print and (min-width: 786px) {
-  #skills .flex-section {
-    display: flex;
-    justify-content: flex-start;
-    gap: 7.5rem;
+@media print and (min-width: 768px) {
+  .main-article-grid {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .article-content-grid {
+    margin-top: 2.5rem;
+  }
+
+  p.article-content-grid,
+  ol.article-content-grid {
+    margin-top: 3.5rem;
+  }
+
+  ol.article-content-grid {
+    margin-left: 0;
+  }
+
+  #skills .article-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
   }
 }
 
@@ -321,7 +356,7 @@ body {
   border-radius: 0.25rem;
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   #experiences header {
     flex-direction: row;
     flex-wrap: wrap;
@@ -332,7 +367,7 @@ body {
   }
 }
 
-@media print and (min-width: 786px) {
+@media print and (min-width: 768px) {
   #experiences header {
     flex-direction: row;
     flex-wrap: wrap;
@@ -344,21 +379,39 @@ body {
 }
 
 .footer {
-  text-align: center;
   padding: 5rem 2.25rem;
   background-image: linear-gradient(transparent, var(--middle-grey));
+}
+
+.footer > * {
+  max-width: 100ch;
 }
 
 .footer-headline {
   line-height: 1.5;
 }
 
+@media screen and (min-width: 992px) {
+  .footer-headline {
+    position: relative;
+    left: 1em;
+  }
+}
+
+@media print and (min-width: 992px) {
+  .footer-headline {
+    position: relative;
+    left: 1em;
+  }
+}
+
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
   padding-top: 1.25rem;
   border-top: 2px solid var(--border-color);
+  margin: 0 auto;
 }
 
 address {
@@ -370,11 +423,9 @@ address:first-child {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (min-width: 786px) {
+@media screen and (min-width: 768px) {
   .contact-info {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   address {
@@ -382,11 +433,14 @@ address:first-child {
   }
 }
 
-@media print and (min-width: 786px) {
+@media print and (min-width: 768px) {
+  .footer > * {
+    max-width: 100ch;
+  }
+
   .contact-info {
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
   }
 
   address {
